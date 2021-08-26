@@ -1,0 +1,653 @@
+// Шрифты
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+      url("../fonts/#{$file_name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "fonts";
+@import "nullstyle.scss";
+@import "mixin.scss";
+@import "table.scss";
+@import "desktop.scss";
+@import "gallery-desktop.scss";
+@import "gallery-table.scss";
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "OpenSans-Regular";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  margin: 0;
+  height: auto;
+  background-color: #000000;
+  background-image: url(../img/bg-back-mobile@2x.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  z-index: 1;
+
+
+
+//Index=====================================================================================================================================
+
+  // Burger
+  .main-nav {
+    position: absolute;
+    width: 100%;
+    min-height: 51px;
+  }
+
+  .main-nav__toggle {
+    position: absolute;
+    top: 17px;
+    right: 0;
+
+    display: block;
+    border: none;
+    background-color: rgba(54, 25, 25, 0.00004);
+  }
+
+  // closed
+
+  .main-nav--closed {
+    
+    & .main-nav__toggle {
+      width: 50px;
+      height: 24px;
+      right: 5%;
+    }
+    & .main-nav__toggle::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      top: 0;
+      right: 0;
+      background-color: #ffffff;
+      border-radius: 1px;
+      box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
+    }
+    & .main-nav__toggle:hover::before {
+      background-color: #d22856;
+      box-shadow: 0 10px 0 0 #d22856, 0 20px 0 0 #d22856;
+    }
+    & .header__wrapper {
+      position: absolute;
+      height: 60px;
+      width: 100%;
+      background-color: #000000;
+      opacity: 0.3;
+    }
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  // Opend
+
+  .main-nav--opened {
+    
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    & .header__logo {
+      top: 20px;
+    }
+
+    & .header__wrapper {
+      position: absolute;
+      height: 70px;
+      width: 100%;
+      background-color: #283645;
+      opacity: 1;
+      border-bottom: 1px solid #000000;
+    }
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    width: 50px;
+    height: 24px;
+    z-index: 3;
+    right: 6%;
+    top: 15px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: 2px;
+      width: 25px;
+      background-color: #ffffff;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &:active::before,
+    &:active::after {
+      background-color: #d22856;
+      opacity: 0.3;
+    }
+    &:hover::before,
+    &:hover::after {
+      background-color: #d22856;
+    }
+  }
+
+  .header__logo {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+  }
+  .header__logo__mobile,
+  .header__logo__table,
+  .header__logo__desktop {
+    svg:hover {
+      fill:#D22856;
+    }
+    svg:active {
+      fill:#ffffff;
+      opacity: 0.3;
+    }
+  }
+  .header__logo__table,
+  .header__logo__desktop {
+    display: none;
+  }
+
+  .header-list a {
+    position: relative;
+    display: block;
+    top: 65px;
+    padding: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #283645;
+    border-top: 1px solid #7e7a7a;
+    border-bottom: 1px solid #000000;
+  }
+
+  @media (max-width: 660px) {
+    .main-nav--closed .header-list li {
+      display: none;
+    }
+
+    .load-tittle__photo {
+      position: relative;
+      margin-bottom: 30px;
+      top: 30px;
+      width: auto;
+      height: 285px;
+      background-image: url("../img/iphone-hand-mobile@1x.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  // Download
+
+  .load-title {
+    padding-top:80px ;
+    h1 {
+      width: 50%;
+      font-family: "OpenSans-Light";
+      font-size: 24px;
+      line-height: 120%;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 30px;
+      margin: 0 auto;
+    }
+
+    .container {
+      text-align: center;
+      width: 90%;
+      margin: 0 5%;
+    }
+    .load-title__download {
+      padding-top: 60px;
+      padding-bottom: 30px;
+      background-color: #1d2631;
+    }
+    .load-title__button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 35px;
+      border: 3px solid #ffffff;
+      border-radius: 40px;
+      margin-top: 30px;
+      text-align: center;
+      &:hover {
+        background-color: #ffffff;
+        color: #d22856;
+      }
+      &:active {
+        background-color: #ffffff;
+        color: #d37991;
+      }
+    }
+    .title-list {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 10% 25px 10%;
+    }
+    .load-title__device {
+      font-family: "OpenSans-Light";
+      line-height: 24px;
+      font-weight: 200;
+      color: #ffffff;
+    }
+  }
+}
+
+// Main
+
+.subtitle {
+  z-index: 2;
+  position: relative;
+
+  .subtitle__wrapper {
+    height: 0;
+  }
+  .subtitle__text {
+    position: relative;
+    margin: 0 20%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: "OpenSans-Light";
+    line-height: 120%;
+    text-align: center;
+    br {
+      display: none;
+    }
+  }
+}
+
+.function {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 270px;
+  height: auto;
+  background-color: #f2f2f2;
+  .function__wrapper {
+    margin: 0 7%;
+  }
+  .function__content {
+    text-align: center;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+  p {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-style: 14px;
+    line-height: 24px;
+  }
+  .function__img {
+    position: absolute;
+    width: 160px;
+    height: 280px;
+    bottom: 0;
+    left: 30%;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
+  }
+  .function__gallery {
+    display: none;
+  }
+}
+
+// Efect__taimer
+
+@media (max-width: 660px) {
+  .main__effect,
+  .reviews__img,
+  .reviews__work,
+  .reviews__name,
+  .reviews__prev,
+  .reviews__next {
+    display: none;
+  }
+}
+
+.reviews {
+  margin: 0 4%;
+  .reviews__name {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .reviews__quotes {
+    line-height: 30px;
+    font-style: 14px;
+    text-align: center;
+    margin-top: 25px;
+  }
+}
+
+.reiews__toggles {
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  .radio {
+    display: none;
+  }
+  .reviews__radio {
+    padding-left: 30px;
+  }
+  .reiews__text {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 3px;
+      left: 3px;
+      width: 6px;
+      height: 6px;
+      background-color: #283645;
+      opacity: 0.3;
+      border-radius: 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      border: 3px solid #283645;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  }
+  .radio:checked + .reiews__text::after {
+    opacity: 1;
+  }
+  .radio:checked + .reiews__text::before {
+    opacity: 0;
+  }
+}
+
+.subtitle__wrapper {
+  background-color: #f2f2f2;
+}
+
+//-- Main__price --
+@media (max-width: 660px) {
+  .price__table--more {
+    display: none;
+  }
+}
+.main__price {
+  padding-top: 70px;
+  padding-bottom: 55px;
+  background-color: #f2f2f2;
+  .price__table {
+    width: 90%;
+    margin: 0 5%;
+    border-collapse: collapse;
+    border: 2px solid #f2f2f2;
+    th {
+      position: relative;
+      padding: 20px;
+      background-color: #283645;
+      color: #ffffff;
+      font-style: 16px;
+      text-transform: uppercase;
+      font-family: "OpenSans-Bold";
+      .price__sale {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75px;
+        height: 100%;
+        background-image: url("../img/bg-hit.svg");
+        background-repeat: no-repeat;
+      }
+      .price__text {
+        text-align: center;
+        padding-right: 25px;
+        transform: rotate(-45deg);
+      }
+      span {
+        font-family: "OpenSans-Light";
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+    td {
+      position: relative;
+      padding: 20px 0;
+      padding-left: 20px;
+      text-transform: uppercase;
+      background-color: #ffffff;
+      border: 2px solid #e5e5e5;
+    }
+    .price__possibilities {
+      content: "";
+      position: absolute;
+      top: 13px;
+      right: 17px;
+    }
+  }
+}
+
+    //Gallery=====================================================================================================================================
+.header {
+  background-position: 50% 10%;
+}
+.load-tittle {
+  &__gallery {
+    height: 235px;
+      h1 {
+        padding-top: 125px;
+        width: 50%;
+        font-family: "OpenSans-Light";
+        font-size: 24px;
+        line-height: 120%;
+        color: #ffffff;
+        text-align: center;
+        margin: 0 auto;
+      }
+  }
+}
+
+//Promo
+.gallery__promo {
+  margin: 50px 5%;
+  p {
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+//User
+.user {
+  position: relative;
+  &__hit {
+    position: absolute;
+    right: 5%;
+    margin: 0;
+    top: 0;
+    padding: 10px 15px 10px 15px;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #D22856;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Footer 
+
+//Contacts
+.contacts {
+  margin: 0 5%;
+  padding: 40px 0;
+  h2 {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 120%;
+    font-family: "OpenSans-Light";
+
+  }
+  .contacts__data {
+    margin-top: 20px;
+    text-align: center;
+    .contacts__text {
+      line-height: 30px;
+      font-size: 18px;
+      font-family: "OpenSans-Bold";
+    }
+    .contacts__info {
+      font-size: 24px;
+      color: #d22856;
+    }
+    a {
+      color: #d22856;
+      &:hover {
+        color: #283645;
+      }
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+//Social
+.social {
+  margin: 35px 5%;
+  text-align: center;
+  justify-content: center;
+  
+  .social__logo {
+    svg:hover {
+      fill: #d22856;
+    }
+    svg:active {
+      fill: #283645;
+      opacity: 0.3;
+    }
+  }
+  .social__list {
+    display: flex;
+    padding: 45px 0;
+    justify-content: center;
+    li {
+      position: relative;
+      margin-right: 8px;
+      width: 55px;
+    }
+    .social__link:active {
+      opacity: 0.1;
+    }
+    .social__link__icon {
+      position: absolute;
+      left: -2px;
+      top: -20px;
+      svg {
+        opacity: 0.1;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .social__develop {
+    position: relative;
+    margin-right: 30px;
+    
+    .social__develop__link {
+      display: block;
+      position: absolute;
+      right: 50px;
+      top: -10px;
+      svg:hover{
+        fill: #000000;
+      }
+      svg:active{
+        fill: #283645;
+        opacity: 0.3;
+      }
+    }
+  }
+}
