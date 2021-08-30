@@ -289,6 +289,25 @@
     right: 5%;
     top: 50px;
   }
+  &__reviews {
+    margin: 0 5%;
+    padding: 5% 4%;
+    background-color: #f2f2f2;
+  }
+  .title {
+    &__like-top {
+      display: inline-block;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      color: #D22856;
+      span {
+        margin-left: 15px;
+      }
+    }
+    &__like-bottom {
+      display: none;
+    } 
+  }
 }
 
 
