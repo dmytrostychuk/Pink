@@ -15,10 +15,6 @@
       display: none;
     }
 
-    .main-nav--closed .header-list li {
-      display: block;
-    }
-
     .main-nav__wrapper {
       margin-right: 10%;
     }
@@ -28,6 +24,8 @@
     }
 
     .header-list {
+      display: block;
+      transform: none;
       display: flex;
       justify-content: space-between;
       width: 60%;
@@ -38,6 +36,7 @@
       top: 20px;
       display: block;
       padding: 24px 0;
+      
       text-transform: none;
       background-color: #ffffff;
       background-color: rgba(54, 25, 25, 0.00004);
@@ -47,6 +46,14 @@
       border-bottom: 3px solid #ffffff;
     }
 
+    .main-nav--closed .header-list {
+      transform: none;
+      padding-top: 20px;
+    }
+    .main-nav--opened .header-list {
+      transform: none;
+      padding-top: 20px;
+    }
     .main-nav--opened .header__wrapper {
       background-color: #000000;
       opacity: 0.3;

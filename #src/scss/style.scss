@@ -56,9 +56,7 @@ body {
   background-size: cover;
   z-index: 1;
 
-
-
-//Index=====================================================================================================================================
+  //Index=====================================================================================================================================
 
   // Burger
   .main-nav {
@@ -80,16 +78,16 @@ body {
   // closed
 
   .main-nav--closed {
-
     .header-list {
       transform: translateY(-500%);
     }
-    
+
     & .main-nav__toggle {
       width: 50px;
       height: 24px;
       right: 5%;
     }
+
     & .main-nav__toggle::before {
       content: "";
       position: absolute;
@@ -101,20 +99,18 @@ body {
       border-radius: 1px;
       box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
     }
+
     & .main-nav__toggle:hover::before {
       background-color: #d22856;
       box-shadow: 0 10px 0 0 #d22856, 0 20px 0 0 #d22856;
     }
+
     & .header__wrapper {
       position: absolute;
       height: 60px;
       width: 100%;
       background-color: #000000;
       opacity: 0.3;
-    }
-
-    @media (max-width: 660px) {
- 
     }
   }
 
@@ -132,6 +128,7 @@ body {
     .header-list {
       transform: translateY(60px);
     }
+
     & .header__logo {
       top: 20px;
     }
@@ -163,17 +160,21 @@ body {
       width: 25px;
       background-color: #ffffff;
     }
+
     &::before {
       transform: rotate(45deg);
     }
+
     &::after {
       transform: rotate(-45deg);
     }
+
     &:active::before,
     &:active::after {
       background-color: #d22856;
       opacity: 0.3;
     }
+
     &:hover::before,
     &:hover::after {
       background-color: #d22856;
@@ -185,21 +186,25 @@ body {
     top: 20px;
     left: 5%;
   }
+
   .header__logo__mobile,
   .header__logo__table,
   .header__logo__desktop {
     svg:hover {
-      fill:#D22856;
+      fill: #d22856;
     }
+
     svg:active {
-      fill:#ffffff;
+      fill: #ffffff;
       opacity: 0.3;
     }
   }
+
   .header__logo__table,
   .header__logo__desktop {
     display: none;
   }
+
   .header-list {
     position: absolute;
     transform: translateY(-500%);
@@ -208,6 +213,7 @@ body {
     transition-duration: 300ms;
     transition-timing-function: linear;
   }
+
   .header-list a {
     display: block;
     padding: 24px;
@@ -233,7 +239,7 @@ body {
   // Download
 
   .load-title {
-    padding-top:80px ;
+    padding-top: 80px;
 
     h1 {
       width: 50%;
@@ -257,6 +263,7 @@ body {
       padding-bottom: 30px;
       background-color: #1d2631;
     }
+
     .load-title__button {
       font-size: 18px;
       font-weight: bold;
@@ -265,20 +272,24 @@ body {
       border-radius: 40px;
       margin-top: 30px;
       text-align: center;
+
       &:hover {
         background-color: #ffffff;
         color: #d22856;
       }
+
       &:active {
         background-color: #ffffff;
         color: #d37991;
       }
     }
+
     .title-list {
       display: flex;
       justify-content: space-between;
       margin: 50px 10% 25px 10%;
     }
+
     .load-title__device {
       font-family: "OpenSans-Light";
       line-height: 24px;
@@ -297,6 +308,7 @@ body {
   .subtitle__wrapper {
     height: 0;
   }
+
   .subtitle__text {
     position: relative;
     margin: 0 20%;
@@ -306,6 +318,7 @@ body {
     font-family: "OpenSans-Light";
     line-height: 120%;
     text-align: center;
+
     br {
       display: none;
     }
@@ -318,23 +331,28 @@ body {
   padding-bottom: 270px;
   height: auto;
   background-color: #f2f2f2;
+
   .function__wrapper {
     margin: 0 7%;
   }
+
   .function__content {
     text-align: center;
   }
+
   h3 {
     font-size: 18px;
     font-weight: bold;
     line-height: 24px;
   }
+
   p {
     margin-top: 15px;
     margin-bottom: 30px;
     font-style: 14px;
     line-height: 24px;
   }
+
   .function__img {
     position: absolute;
     width: 160px;
@@ -344,6 +362,7 @@ body {
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
   }
+
   .function__gallery {
     display: none;
   }
@@ -364,6 +383,7 @@ body {
 
 .reviews {
   margin: 0 4%;
+
   .reviews__name {
     display: block;
     font-size: 18px;
@@ -371,11 +391,17 @@ body {
     margin-top: 20px;
     text-align: center;
   }
+
+  &__name__bottom {
+    display: none;
+  }
+
   .reviews__quotes {
     line-height: 30px;
     font-style: 14px;
     text-align: center;
     margin-top: 25px;
+    margin-bottom: 30px;
   }
 }
 
@@ -388,17 +414,26 @@ body {
   list-style: none;
 
   li {
-    padding-left: 30px;
+    margin-left: 30px;
     position: relative;
     opacity: 0.3;
 
-    &.slick-active {
-      opacity: 1;
+    &.slick-active { 
+      
+      &.slick-active::after {
+        content: "";
+        top: -1px;
+        left: -1px;
+        opacity: 1;
+        width: 15px;
+        height: 15px;
+        border: 3px solid #000000;
+        border-radius: 50%;
+      }
     }
     &::before {
       content: "";
       position: absolute;
-
       top: 3px;
       left: 3px;
       width: 6px;
@@ -407,6 +442,7 @@ body {
       opacity: 0.3;
       border-radius: 50%;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -435,15 +471,18 @@ body {
     display: none;
   }
 }
+
 .main__price {
   padding-top: 70px;
   padding-bottom: 55px;
   background-color: #f2f2f2;
+
   .price__table {
     border-collapse: collapse;
     border: 2px solid #f2f2f2;
     width: 90%;
     margin: 0 5%;
+
     th {
       position: relative;
       padding: 20px;
@@ -452,6 +491,7 @@ body {
       font-style: 16px;
       text-transform: uppercase;
       font-family: "OpenSans-Bold";
+
       .price__sale {
         content: "";
         position: absolute;
@@ -462,17 +502,20 @@ body {
         background-image: url("../img/bg-hit.svg");
         background-repeat: no-repeat;
       }
+
       .price__text {
         text-align: center;
         padding-right: 25px;
         transform: rotate(-45deg);
       }
+
       span {
         font-family: "OpenSans-Light";
         font-weight: 400;
         line-height: 30px;
       }
     }
+
     td {
       position: relative;
       padding: 20px 0;
@@ -481,6 +524,7 @@ body {
       background-color: #ffffff;
       border: 2px solid #e5e5e5;
     }
+
     .price__possibilities {
       content: "";
       position: absolute;
@@ -490,29 +534,33 @@ body {
   }
 }
 
-    //Gallery=====================================================================================================================================
+//Gallery=====================================================================================================================================
+
 .header {
   background-position: 50% 10%;
 }
+
 .load-tittle {
   &__gallery {
     height: 235px;
-      h1 {
-        padding-top: 125px;
-        width: 50%;
-        font-family: "OpenSans-Light";
-        font-size: 24px;
-        line-height: 120%;
-        color: #ffffff;
-        text-align: center;
-        margin: 0 auto;
-      }
+    h1 {
+      padding-top: 125px;
+      width: 50%;
+      font-family: "OpenSans-Light";
+      font-size: 24px;
+      line-height: 120%;
+      color: #ffffff;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 }
 
-//Promo
+//Promo ========================================================================================
+
 .gallery__promo {
   margin: 50px 5%;
+
   p {
     font-size: 14px;
     line-height: 30px;
@@ -520,9 +568,11 @@ body {
   }
 }
 
-//User
+//User ==========================================================================
+
 .user {
   position: relative;
+
   &__hit {
     position: absolute;
     right: 5%;
@@ -533,149 +583,136 @@ body {
     line-height: 24px;
     text-transform: uppercase;
     color: #ffffff;
-    background-color: #D22856;
+    background-color: #d22856;
   }
+
   &__reviews {
     margin: 0 5%;
     padding: 5% 4%;
     background-color: #f2f2f2;
   }
+
   .title {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
     line-height: 24px;
+
     &__name {
       font-family: "OpenSans-Bold";
       font-weight: bold;
     }
+
     &__time {
       font-size: 12px;
       font-family: "OpenSans-Light";
       font-weight: lighter;
       text-transform: uppercase;
     }
+
     &__like-top {
       display: none;
     }
+
     &__like-bottom {
-      margin-top: 20px; 
+      margin-top: 20px;
       text-transform: uppercase;
-      color: #D22856;
+      color: #d22856;
+
       span {
-        padding-right: 15px;;
+        padding-right: 15px;
       }
     }
+
     &__text {
       line-height: 24px;
     }
   }
 }
 
-//reviews-post
+//reviews-post======================================================
+
 .reviews-post {
-margin: 5%;
-&__container {
-  background-color: #f2f2f2;
-  margin-bottom: 20px;
-  .title__reviews {
-    padding: 10px 15px 10px 15px;
-  }
-  .title {
-    
-    font-size: 14px;
-    line-height: 24px;
-    &__name {
-      font-family: "OpenSans-Bold";
-      font-weight: bold;
+  margin: 5%;
+
+  &__container {
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+
+    .title__reviews {
+      padding: 10px 15px 10px 15px;
     }
-    &__time {
-      font-size: 12px;
-      font-family: "OpenSans-Light";
-      font-weight: lighter;
-      text-transform: uppercase;
-    }
-    &__like-bottom {
-      margin-top: 20px; 
-      text-transform: uppercase;
-      color: #D22856;
-      span {
-        padding-right: 15px;;
+    .title {
+      font-size: 14px;
+      line-height: 24px;
+
+      &__name {
+        font-family: "OpenSans-Bold";
+        font-weight: bold;
+      }
+
+      &__time {
+        font-size: 12px;
+        font-family: "OpenSans-Light";
+        font-weight: lighter;
+        text-transform: uppercase;
+      }
+
+      &__like-bottom {
+        margin-top: 20px;
+        text-transform: uppercase;
+        color: #d22856;
+
+        span {
+          padding-right: 15px;
+        }
+      }
+
+      &__text {
+        line-height: 24px;
       }
     }
-    &__text {
-      line-height: 24px;
-    }
   }
 }
-}
 
+//Footer==========================================================================
 
+//Contacts==========================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Footer 
-
-//Contacts
 .contacts {
   margin: 0 5%;
   padding: 40px 0;
+
   h2 {
     padding-bottom: 10px;
     text-align: center;
     font-size: 24px;
     line-height: 120%;
     font-family: "OpenSans-Light";
-
   }
+
   .contacts__data {
     margin-top: 20px;
     text-align: center;
+
     .contacts__text {
       line-height: 30px;
       font-size: 18px;
       font-family: "OpenSans-Bold";
     }
+
     .contacts__info {
       font-size: 24px;
       color: #d22856;
     }
+
     a {
       color: #d22856;
+
       &:hover {
         color: #283645;
       }
+
       &:active {
         opacity: 0.3;
       }
@@ -683,58 +720,70 @@ margin: 5%;
   }
 }
 
-//Social
+//Social ==========================================================================
+
 .social {
   margin: 35px 5%;
   text-align: center;
   justify-content: center;
-  
+
   .social__logo {
+
     svg:hover {
       fill: #d22856;
     }
+
     svg:active {
       fill: #283645;
       opacity: 0.3;
     }
   }
+
   .social__list {
     display: flex;
     padding: 45px 0;
     justify-content: center;
+
     li {
       position: relative;
       margin-right: 8px;
       width: 55px;
     }
+
     .social__link:active {
       opacity: 0.1;
     }
+
     .social__link__icon {
       position: absolute;
       left: -2px;
       top: -20px;
+
       svg {
         opacity: 0.1;
+
         &:hover {
           opacity: 1;
         }
       }
     }
   }
+
   .social__develop {
     position: relative;
     margin-right: 30px;
-    
+
     .social__develop__link {
       display: block;
       position: absolute;
       right: 50px;
       top: -10px;
-      svg:hover{
+
+      svg:hover {
         fill: #000000;
       }
-      svg:active{
+
+      svg:active {
         fill: #283645;
         opacity: 0.3;
       }

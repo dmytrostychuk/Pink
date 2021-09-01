@@ -5,6 +5,7 @@
     .container {
       margin: 0 5%;
     }
+  
     .header__logo {
       top: 30px;
     }
@@ -16,16 +17,17 @@
     .header__logo__desktop {
       display: none;
     }
+    
+    
+    
+
     .main-nav--closed {
       & .header__wrapper {
         position: absolute;
-        height: 120px;
+        height: 100px;
         width: 100%;
         background-color: #000000;
         opacity: 0.3;
-      }
-      & .header-list li {
-        display: none;
       }
     }
     .main-nav--opened .main-nav__toggle {
@@ -37,6 +39,9 @@
       }
       & .header__wrapper {
         height: 100px;
+      }
+      .header-list {
+        padding-top: 40px;
       }
     }
     .main-nav__toggle {
@@ -102,6 +107,9 @@
   }
 
   // Main
+  .reiews__toggles {
+    display: none;
+  }
   .subtitle {
     padding-top: 40px;
     .subtitle__text {
