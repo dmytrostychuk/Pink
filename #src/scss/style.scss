@@ -406,6 +406,7 @@ body {
 }
 
 .reiews__toggles {
+  display: inline-block;
   display: flex;
   justify-content: center;
   margin-right: 30px;
@@ -418,8 +419,7 @@ body {
     position: relative;
     opacity: 0.3;
 
-    &.slick-active { 
-      
+    &.slick-active {
       &.slick-active::after {
         content: "";
         top: -1px;
@@ -534,7 +534,7 @@ body {
   }
 }
 
-//Gallery=====================================================================================================================================
+//Gallery ===================================================================
 
 .header {
   background-position: 50% 10%;
@@ -556,8 +556,7 @@ body {
   }
 }
 
-//Promo ========================================================================================
-
+//Promo
 .gallery__promo {
   margin: 50px 5%;
 
@@ -568,8 +567,7 @@ body {
   }
 }
 
-//User ==========================================================================
-
+//User
 .user {
   position: relative;
 
@@ -630,7 +628,7 @@ body {
   }
 }
 
-//reviews-post======================================================
+//reviews-post
 
 .reviews-post {
   margin: 5%;
@@ -659,7 +657,8 @@ body {
       }
 
       &__like-bottom {
-        margin-top: 20px;
+        padding-top: 30px;
+        margin-bottom: 20px;
         text-transform: uppercase;
         color: #d22856;
 
@@ -673,12 +672,366 @@ body {
       }
     }
   }
+
+  &__sub-tittle {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .sub-tittle__text {
+      font-size: 14px;
+      line-height: 30px;
+      color: #283645;
+      text-align: center;
+    }
+  }
 }
+
+// style-photo
+
+.style-photo {
+  background-color: #f2f2f2;
+  &__container {
+    padding: 5%;
+  }
+}
+
+.style-photo__effect {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #2836451a;
+
+  .photo__effect {
+    padding: 9%;
+  }
+
+  .active__icon {
+    fill: #d22856;
+    opacity: 1;
+  }
+
+  svg {
+    opacity: 0.3;
+
+    &:active {
+      opacity: 1;
+      fill: #d22856;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.mobile__slider {
+  display: none;
+}
+
+// Slider
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: #000000;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+
+  &:active {
+    background: red;
+  }
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+// button
+.style-photo__tougle {
+  margin-top: 65px;
+  padding: 0 5%;
+  width: 100%;
+
+  &__button {
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    color: #d22856;
+    border: 3px solid #d22856;
+    border-radius: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    &:nth-child(2) {
+      margin-bottom: 40px;
+    }
+
+    &:hover {
+      color: #ffffff;
+      background-color: #d22856;
+    }
+
+    &:active {
+      color: #ffffff27;
+    }
+  }
+
+  .abolition-button {
+    color: #283645;
+    border-color: #283645;
+    opacity: 0.1;
+
+    &:hover {
+      opacity: 0.3;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      background-color: #28364569;
+      color: #ffffff4f;
+    }
+  }
+}
+
+//Form =====================================================================
+.load-tittle__gallery h1 {
+  width: 228px;
+  padding-top: 90px;
+}
+
+//main
+.form__subtitle {
+  display: none;
+}
+
+.form__wrapper {
+  margin: 5%;
+}
+
+//user
+.user {
+  margin-bottom: 30px;
+  
+  &__name {
+    margin-bottom: 20px;
+
+    & label {
+      padding: 0 0 15px 20px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #D22856;
+      
+    }
+
+    & input {
+      padding: 20px 0 20px 15px;
+      font-size: 18px;
+      color: #000000;
+      border: 2px solid #e5e5e5;
+      border-radius: 3px;
+    }
+
+    input:hover {
+      border-color: #000000;
+    }
+
+    input:focus {
+      border-color: #d22856;
+    }
+  }
+
+  .mobile__none {
+    display: none;
+  }
+}
+
+//achievements
+.achievements {
+  padding-top: 30px;
+  background-color: #F2F2F2;
+
+  &__wrapper {
+    margin: 0 5%;
+
+    legend {
+      width: 100%;
+      padding: 0 25px;
+      margin-bottom: 30px;
+      line-height: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #D22856;
+    }
+
+    p {
+      position: relative;
+      padding-bottom: 50px;
+      padding-left: 50px;
+    }
+
+    label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -10px;
+      width: 35px;
+      height: 35px;
+      border: 2px solid #e5e5e5;
+    }
+
+    label::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 7px;
+      width: 22px;
+      height: 16px;
+      color: #d22856;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%23d22856' version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='21.698px' height='16.09px' viewBox='-82.357 4.875 21.698 16.09' enable-background='new -82.357 4.875 21.698 16.09' xml:space='preserve'%3e%3cpath fill='%23d22856' d='M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z'/%3e%3c/svg%3e ");
+      opacity: 0;
+      transition: 0.2s linear;
+    }
+
+    input:checked +  label::after {
+      opacity: 1;
+    }
+
+    input:not(:disabled)+label:hover::before {
+      border-color: #000000;
+    }
+
+    input:not(:disabled)+label:active::before {
+      border-color: #d22856;
+    }
+  }
+}
+
+//contact
+.contact {
+  padding-top: 30px;
+
+  &__wrapper {
+    margin: 0 5%;
+  }
+
+  legend {
+    display: none;
+  }
+
+  input {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+
+//=======================
+.user {
+
+  .user__device {
+    padding-top: 20px;
+
+    legend {
+      padding: 0 25px;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #D22856;
+    }
+
+    p {
+      position: relative;
+      color: #283645;
+      padding: 0 0 50px 70px;
+    }
+
+    label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -10px;
+      width: 37px;
+      height: 37px;
+      border: 2px solid #e5e5e5;
+      border-radius: 50%;
+    }
+
+    label::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 11px;
+      width: 15px;
+      height: 15px;
+      background-color: #d22856;
+      border-radius: 50%;
+      opacity: 0;
+      transition: 0.2s linear;
+    }
+
+    input:checked + label::after {
+      opacity: 1;
+    }
+
+    input:not(:disabled)+label:hover::before {
+      border-color: #000000;
+    }
+
+    input:not(:disabled)+label:active::before {
+      border-color: #d22856;
+    }
+  }
+
+  .user__info {
+
+    .user__name {
+      width: 100%;
+
+      & label {
+        margin-top: 16px;
+        margin-right: 25px;
+        padding-left: 0;
+      }
+
+      & input {
+        width: 100%;
+      }
+    }
+  }
+  
+  
+}
+
+
+
+
+
+
+
+
 
 //Footer==========================================================================
 
-//Contacts==========================================================================
-
+//Contacts
 .contacts {
   margin: 0 5%;
   padding: 40px 0;
@@ -728,7 +1081,6 @@ body {
   justify-content: center;
 
   .social__logo {
-
     svg:hover {
       fill: #d22856;
     }
