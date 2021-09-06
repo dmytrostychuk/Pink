@@ -1034,6 +1034,11 @@ body {
   font-size: 18px;
 }
 
+.user {
+  margin: 0;
+  padding: 0 5%;
+}
+
 .user .user__device {
   padding-top: 20px;
 }
@@ -1102,6 +1107,65 @@ body {
 
 .user .user__info .user__name input {
   width: 100%;
+}
+
+legend {
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #D22856;
+}
+
+.emotions__wrapper {
+  width: 100%;
+  padding: 40px 5%;
+}
+
+.emotions textarea {
+  width: 100%;
+  padding: 15px 5%;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  border: 2px solid #e5e5e5;
+  resize: none;
+}
+
+.send {
+  padding: 0 5%;
+}
+
+.send__bth {
+  width: 100%;
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #2AAB6D;
+  border-radius: 5px;
+}
+
+.send__text {
+  margin-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.send__text span {
+  position: relative;
+  color: #D22856;
+  padding-right: 20px;
+}
+
+.send__text span::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 11px;
+  width: 13px;
+  height: 1px;
+  background-color: #283645;
 }
 
 .contacts {
@@ -1725,14 +1789,6 @@ body {
 
   fieldset {
     border: 2px solid #E5E5E5;
-  }
-
-  legend {
-    padding: 0 25px;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #D22856;
   }
 
   .table__none {
