@@ -568,7 +568,7 @@ body {
 }
 
 //User
-.user {
+.users {
   position: relative;
 
   &__hit {
@@ -830,6 +830,7 @@ body {
 //user
 .user {
   margin-bottom: 30px;
+  padding: 0 5%;
   
   &__name {
     margin-bottom: 20px;
@@ -859,9 +860,10 @@ body {
     }
   }
 
-  .mobile__none {
-    display: none;
-  }
+  
+}
+.mobile__none {
+  display: none;
 }
 
 //achievements
@@ -947,7 +949,6 @@ body {
 //=======================
 .user {
   margin: 0;
-  padding: 0 5%;
 
   .user__device {
     padding-top: 20px;
@@ -1070,7 +1071,7 @@ legend {
     text-align: center;
     text-transform: uppercase;
 
-    span {
+    .send__line {
       position: relative;
       color: #D22856;
       padding-right: 20px;
@@ -1085,6 +1086,10 @@ legend {
         background-color: #283645;
       }
     }
+  }
+
+  &__desktop {
+    display: none;
   }
 }
 
@@ -1139,6 +1144,10 @@ legend {
       }
     }
   }
+}
+
+iframe {
+  width: 100%;
 }
 
 //Social ==========================================================================

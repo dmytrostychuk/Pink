@@ -397,11 +397,14 @@
     }
   }
 
+  .user {
+    padding: 0;
+  }
+
   .form__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-right: 10%;
-    margin-left: 15%;
+    margin: 0 10%;
 
     &__name {
       margin-bottom: 37px;
@@ -409,18 +412,121 @@
 
     .user__info {
       width: 45%;
-      
     }
 
     .user__device {
-      width: 45%;
+      width: 50%;
       padding: 0;
+
+      legend {
+        padding: 0 10px;
+      }
       p {
         padding: 0 0 50px 90px;
       }
-     
+    }
+  }
+
+  //contact 
+  .contact {
+
+    &__wrapper {
+      margin: 0 10%;
     }
 
+    .fieldset {
+      display: block;
+    }
+    
+    &__container {
+      display:flex;
+      justify-content: space-between;
+    }
+
+    legend {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .user__name  {
+      width: 100%;
+      margin: 10px 0;
+
+      &:nth-child(1) {
+        margin-left:5%;
+        margin-right:5%;
+      }
+
+      &:nth-child(2) {
+        margin-right:5%;
+      }
+
+      label {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  // achievements
+  .achievements {
+
+    &__wrapper {
+      margin: 0 10%;
+    }
+
+    fieldset {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    p {
+      width: 33%;
+      padding-left: 85px;
+      text-align: left;
+    }
+
+    label::before {
+      left: 35px;
+      top: 0;
+    }
+
+    label::after {
+      left: 41px;
+      top: 8px;
+    }
+  }
+
+  // emotions
+  .emotions {
+
+    &__wrapper {
+      width: 80%;
+      margin: 0 10%;
+      padding: 50px 0;
+    }
+
+    .emotions__text {
+      margin: 5%;
+      margin-top: 3%;
+    }
+
+    textarea {
+      padding: 2%;
+      text-align: left;
+    }
+  }
+
+  // send
+  .send {
+    margin-bottom: 50px;
+
+    &__bth {
+      width: 30%;
+    }
+
+    &__desktop {
+      display: inline-block;
+    }
   }
 
 
