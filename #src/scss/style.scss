@@ -36,7 +36,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -301,17 +301,17 @@ body {
 
 // Main
 
-.subtitle {
+.slogo {
   z-index: 2;
   position: relative;
 
-  .subtitle__wrapper {
+  &__wrapper {
     height: 0;
   }
 
-  .subtitle__text {
+  .slogo__text {
     position: relative;
-    margin: 0 20%;
+    margin: 0;
     margin-top: 40px;
     margin-bottom: 20px;
     font-size: 24px;
@@ -349,7 +349,6 @@ body {
   p {
     margin-top: 15px;
     margin-bottom: 30px;
-    font-style: 14px;
     line-height: 24px;
   }
 
@@ -398,7 +397,6 @@ body {
 
   .reviews__quotes {
     line-height: 30px;
-    font-style: 14px;
     text-align: center;
     margin-top: 25px;
     margin-bottom: 30px;
@@ -461,7 +459,7 @@ body {
   }
 }
 
-.subtitle__wrapper {
+.slogo__wrapper {
   background-color: #f2f2f2;
 }
 
@@ -488,7 +486,6 @@ body {
       padding: 20px;
       background-color: #283645;
       color: #ffffff;
-      font-style: 16px;
       text-transform: uppercase;
       font-family: "OpenSans-Bold";
 
@@ -570,6 +567,10 @@ body {
 //User
 .users {
   position: relative;
+
+  img {
+    width: 100%;
+  }
 
   &__hit {
     position: absolute;
@@ -831,7 +832,7 @@ body {
 .user {
   margin-bottom: 30px;
   padding: 0 5%;
-  
+
   &__name {
     margin-bottom: 20px;
 
@@ -839,8 +840,7 @@ body {
       padding: 0 0 15px 20px;
       line-height: 30px;
       text-transform: uppercase;
-      color: #D22856;
-      
+      color: #d22856;
     }
 
     & input {
@@ -859,8 +859,6 @@ body {
       border-color: #d22856;
     }
   }
-
-  
 }
 .mobile__none {
   display: none;
@@ -869,7 +867,7 @@ body {
 //achievements
 .achievements {
   padding-top: 30px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 
   &__wrapper {
     margin: 0 5%;
@@ -881,7 +879,7 @@ body {
       line-height: 18px;
       text-transform: uppercase;
       text-align: center;
-      color: #D22856;
+      color: #d22856;
     }
 
     p {
@@ -913,15 +911,15 @@ body {
       transition: 0.2s linear;
     }
 
-    input:checked +  label::after {
+    input:checked + label::after {
       opacity: 1;
     }
 
-    input:not(:disabled)+label:hover::before {
+    input:not(:disabled) + label:hover::before {
       border-color: #000000;
     }
 
-    input:not(:disabled)+label:active::before {
+    input:not(:disabled) + label:active::before {
       border-color: #d22856;
     }
   }
@@ -945,7 +943,6 @@ body {
   }
 }
 
-
 //=======================
 .user {
   margin: 0;
@@ -958,7 +955,7 @@ body {
       margin-bottom: 50px;
       text-transform: uppercase;
       text-align: center;
-      color: #D22856;
+      color: #d22856;
     }
 
     p {
@@ -995,17 +992,16 @@ body {
       opacity: 1;
     }
 
-    input:not(:disabled)+label:hover::before {
+    input:not(:disabled) + label:hover::before {
       border-color: #000000;
     }
 
-    input:not(:disabled)+label:active::before {
+    input:not(:disabled) + label:active::before {
       border-color: #d22856;
     }
   }
 
   .user__info {
-
     .user__name {
       width: 100%;
 
@@ -1026,12 +1022,11 @@ legend {
   padding-bottom: 20px;
   text-transform: uppercase;
   text-align: center;
-  color: #D22856;
+  color: #d22856;
 }
 
 //emotions
 .emotions {
-
   &__wrapper {
     width: 100%;
     padding: 40px 5%;
@@ -1062,7 +1057,7 @@ legend {
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
-    background-color: #2AAB6D;
+    background-color: #2aab6d;
     border-radius: 5px;
   }
 
@@ -1073,7 +1068,7 @@ legend {
 
     .send__line {
       position: relative;
-      color: #D22856;
+      color: #d22856;
       padding-right: 20px;
 
       &::before {
@@ -1092,15 +1087,6 @@ legend {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
 
 //Footer==========================================================================
 
